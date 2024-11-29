@@ -1,4 +1,5 @@
 {
+  "homepage": "https://dagon0721.github.io/foo",
   "name": "foo",
   "version": "0.1.0",
   "private": true,
@@ -6,12 +7,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "touch out/.nojekyll && gh-pages -d out -b deploy -t true"
   },
   "dependencies": {
+    "gh-pages": "^6.2.0",
+    "next": "14.2.17",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.17"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "eslint": "^8",
